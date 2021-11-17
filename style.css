@@ -1,0 +1,168 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  background: black;
+}
+header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper{
+  width: 100%;
+  height:100vh;
+  display: flex;
+}
+
+section{
+  position: relative;
+  border: 1px solid;
+  border-radius: 12px;
+  flex-basis: 100%;
+  margin: 10px;
+  padding: 10px;
+  overflow: auto;
+  background:white;
+}
+
+.img{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  margin-top: 10%;
+}
+.pic-box{
+  position: relative;
+  width: 70%;
+  height:0;
+  padding-bottom: 70%;
+  top: 10%;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: black;
+ 
+}
+.pic-box img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.dish{
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+h1{
+color: white;
+font-size: 46px;
+font-family: fantasy;
+
+}
+h2{
+  font-size: 34px;
+  margin-bottom: 25px;
+  font-family: fantasy;
+}
+h3{
+  font-size: 24px;
+  margin-bottom: 30px;
+  font-family: fantasy;
+}
+h4{
+  font-size: 20px;
+  font-style: italic;
+  font-family: fantasy;
+}
+
+li{
+  margin: 10px;
+  font-size: 18px;
+  font-family: Sans-serif;
+}
+
+.other{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.links{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a{
+  margin: 20px;
+  text-decoration: none;
+  color: black;
+  font-family: sans-serif;
+  font-size: 18px;
+}
+
+.facts{
+  top:40px;
+  right: 20px;
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  background: white;
+  padding: 20px;
+  z-index: 999;
+  overflow: auto;
+  border: 1px solid black;
+  word-spacing: 10px;
+  border-radius: 12px;
+  transform: scale(0,0);
+  transition: 1s ease-in;
+  transform-origin: top right;
+}
+.aglio-e-olio .facts{
+  height: 100px;
+} 
+.carbonara .facts{
+  height: 100px;
+}
+.checkbox{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: none;
+}
+ input[type="checkbox"]:checked + div{
+  transform: scale(1);
+}
+label{
+  position: absolute;
+  top:10px;
+  right: 10px;
+}
+
+i{
+  font-size: 25px;
+  text-decoration: none;
+  color: white;
+  text-shadow:black 1px 0 10px;
+}
+
+.tacopaj.active{
+  flex-basis:300%;
+}
+.aglio-e-olio.active{
+  flex-basis:300%;
+}
+.carbonara.active{
+  flex-basis:300%;
+}
+@media screen and (max-width: 600px) {
+  .wrapper{
+    flex-direction: column;
+    height: 100%;
+  }
+}
